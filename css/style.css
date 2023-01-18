@@ -1,0 +1,15 @@
+*{margin: 0;padding: 0;box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+img{display: block; width: 100%; }
+.cabecalho{ text-align: center;padding: 20px; text-transform: uppercase;}
+.box-container-blue{height: 100vh; background-color: rgb(236, 236, 236);}
+.box-principal-conteudo{ background-color: rgb(255, 255, 255); width: 500px;  margin: 0 auto; border-radius: 10px;box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.274);overflow: hidden; }
+.msg{  text-align: center; padding: 50px 0px 0px 0px;}
+.foto {text-align: center;}
+.foodi{text-align: center; margin-top: 30px;}
+#campo-msg p{font-weight: bold; font-size: 1.3rem; margin-bottom: 20px;}
+#input_number{border: none; background-color: rgb(214, 214, 214); padding: 8px 10px; border-radius: 5px; color: #000; font-weight: bold; text-transform: capitalize;}
+#btn_adicionar{border: none; padding: 8px 10px; border-radius: 5px; background-color: #222; color: #fff; font-weight: bold; cursor: pointer;}
+#select_resultado{background-color: rgb(204, 204, 204); width: 100%; padding: 20px; text-align: center; border: none; margin-top: 20px;}
+#select_resultado option{font-weight: bold; ; background-color: rgb(231, 231, 231); padding: 3px; border-radius: 5px;}
+#btn_finalizar{border: none; padding: 8px 50px; border-radius: 5px; background-color: rgb(95, 95, 95); color: #fff; font-weight: bold; cursor: pointer; margin-top: 10px; text-transform: capitalize;}
+#resultado{background-color: rgb(226, 226, 226); padding: 10px; margin-top: 20px;}
