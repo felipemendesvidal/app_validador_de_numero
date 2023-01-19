@@ -30,7 +30,8 @@ function adicionar_numero(){
 
     //verifica se é um numero e se não esta na lista
     if (isumnumero(input_number.value) && !estanalista(input_number.value, valores_adicionados )){
-        alert('ok')
+        // colocar o valor na lista e de valores
+        
     }else{
         alert('valor invalido ou já em lista')
     }
