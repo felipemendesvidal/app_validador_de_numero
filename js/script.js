@@ -1,44 +1,65 @@
+// vars 
+ //pegar data atual
+ let input_number = document.getElementById('input_number');
+ let lista_adiconada_resultados = document.getElementById('select_resultado');
+ let area_de_resultados = document.getElementById('resultado');
+ //valores adicionados
+ let valores_adicionados = [];
+ 
+
+
+//verifica se é um numero
+function isumnumero (numero_analisado){
+
+    if(Number(numero_analisado) >= 1 && Number(numero_analisado)<= 100){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+
+//verifica se o numero já esta na lista
+function estanalista(numero_analisado, lista_analisada){
+    if(lista_analisada.indexOf(Number(numero_analisado)) != -1){
+        // -1 valor não encontrado na lista
+        return true;
+
+    }else{
+        return false
+    }
+
+}
+
+// função
 function adicionar_numero(){
+
     
-    //pegar data atual
-    let input_number = document.getElementById('input_number');
-    let lista_adiconada_resultados = document.getElementById('select_resultado');
-    let area_de_resultados = document.getElementById('resultado');
-    //valores adicionados
-    let valores_adicionados = [];
-    
-    //verifica se é um numero
-    function isumnumero (numero_analisado){
-
-        if(Number(numero_analisado) >= 1 && Number(numero_analisado)<= 100){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-    //verifica se o numero já esta na lista
-    function estanalista(numero_analisado, lista_analisada){
-        if(lista_analisada.indexOf(Number(numero_analisado)) != -1){
-            // -1 valor não encontrado na lista
-            return true
-        }else{
-            return false
-        }
-
-    }
 
     //verifica se é um numero e se não esta na lista
     if (isumnumero(input_number.value) && !estanalista(input_number.value, valores_adicionados )){
         // colocar o valor na lista e de valores
+        valores_adicionados.push(Number(input_number.value));
+        // item que vai ser adicionado
+        let item_option_criado = document.createElement('option');
+
+        //valor do option
+        item_option_criado.text = `Valor ${input_number.value} adicionado.`;
         
+        //adicionando na lista
+        lista_adiconada_resultados.appendChild(item_option_criado);
     }else{
         alert('valor invalido ou já em lista')
     }
+
+    //limpar imput
+    input_number.value = '';
+    input_number.focus();
    
     
     
 }
+
 
 function finalizer_resultado(){
 

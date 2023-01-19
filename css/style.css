@@ -10,6 +10,7 @@ img{display: block; width: 100%; }
 #input_number{border: none; background-color: rgb(214, 214, 214); padding: 8px 10px; border-radius: 5px; color: #000; font-weight: bold; text-transform: capitalize;}
 #btn_adicionar{border: none; padding: 8px 10px; border-radius: 5px; background-color: #222; color: #fff; font-weight: bold; cursor: pointer;}
 #select_resultado{background-color: rgb(204, 204, 204); width: 100%; padding: 20px; text-align: center; border: none; margin-top: 20px;}
-#select_resultado option{font-weight: bold; ; background-color: rgb(231, 231, 231); padding: 3px; border-radius: 5px;}
+#select_resultado option{font-weight: bold; ; background-color: rgb(231, 231, 231); padding: 5px; border-radius: 5px; margin-top: 5px;}
+#valor_otption_especial{background-color: rgb(78, 78, 78)!important; color: #fff;}
 #btn_finalizar{border: none; padding: 8px 50px; border-radius: 5px; background-color: rgb(95, 95, 95); color: #fff; font-weight: bold; cursor: pointer; margin-top: 10px; text-transform: capitalize;}
 #resultado{background-color: rgb(226, 226, 226); padding: 10px; margin-top: 20px;}
