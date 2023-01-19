@@ -48,6 +48,7 @@ function adicionar_numero(){
         
         //adicionando na lista
         lista_adiconada_resultados.appendChild(item_option_criado);
+        area_de_resultados.innerHTML = '';
     }else{
         alert('valor invalido ou já em lista')
     }
@@ -62,6 +63,52 @@ function adicionar_numero(){
 
 
 function finalizer_resultado(){
+    if(valores_adicionados.length == 0){
+        alert('adicone valores antes de finalizar');
+    }else{
+
+        let total_elementos = valores_adicionados.length;
+        let valor_maior = valores_adicionados[0];
+        let valor_menor = valores_adicionados[0];
+        let soma_numeros = 0;
+        let media_numeros = 0;
+
+
+        // zerando o resultado visualmente 
+        area_de_resultados.innerHTML = '';
+
+
+        //maior ou menor numero verificação
+        for(let para_cada_posicao in valores_adicionados){
+
+            //soma dos numeros
+            soma_numeros += valores_adicionados[para_cada_posicao]
+
+            //testes se valores são maior ou menores
+            if(valores_adicionados[para_cada_posicao] > valor_maior){
+                valor_maior =valores_adicionados[para_cada_posicao];
+            }
+            if(valores_adicionados [para_cada_posicao] < valor_menor){
+                valor_menor = valores_adicionados[para_cada_posicao]
+
+            }
+            media_numeros = soma_numeros / total_elementos;
+        }
+
+        //laço de percuros, faz a soma dos numeros
+
+        area_de_resultados.innerHTML += `<p> O total de numeros cadastrados é  ${total_elementos}.`;
+        area_de_resultados.innerHTML += `<p> O maior valor adicionado foi ${valor_maior}.`;
+        area_de_resultados.innerHTML += `<p> O menor valor adicionado foi ${valor_menor}.`;
+        area_de_resultados.innerHTML += `<p> A soma dos numeros adicionados é ${soma_numeros}.`;
+        area_de_resultados.innerHTML += `<p> A media dos numeros adicionados é ${media_numeros}.`;
+
+
+
+
+
+
+    }
 
 }
 
